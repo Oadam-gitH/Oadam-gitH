@@ -1,0 +1,23 @@
+My first draft of code will be a ceaser cipher. this is already a popular program idea so i do not have to work from scratch. i am declaring here the points of research i used to create my first ceaser cipher draft:
+
+https://stackoverflow.com/questions/8886947/caesar-cipher-function-in-python - this is a simple ceaser cipher function. from experience i know that using OOP makes for the calling of files and functions much easier, however since i am starting simple, i will not use this code entirely, instead im stripping it down to the simplest it can get and making a very small self sufficient ceaser cipher, without a function.
+
+https://stackoverflow.com/questions/57501478/what-does-ordc-and-chrn-do-and-what-does-this-code-output-and-why-i-do-not - research into chr() and ord(), both of which i have used in my first ceaser draft to create ingeger representations of my characters, and character repersentations for my integers. crucial for the "shifting" of the ceaser wheel.
+
+this first draft has a fixed key of 3 for now, but can be easily changed to take user input later down the line. 
+
+
+TESTING:
+
+input: 
+
+enter a message to encode: helloworld
+
+output: 
+
+encoded message: khoorzruog
+
+![this website shows the ceaser cipher output is correct](image.png)
+
+website used to check this: https://cryptii.com/pipes/caesar-cipher/
+

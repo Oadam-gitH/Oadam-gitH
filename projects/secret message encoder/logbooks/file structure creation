@@ -1,0 +1,5 @@
+to begin, im going to create 5 files. a main program file, a ceaser cipher file, a vigenere cipher file, a XOR cipher file and a config JSON file. these will be stored locally on my home computer to begin with, and then pushed to this repo with each iteration.
+
+the config file will allow me to hit the requirement of reading data from a file, and to keep it from seeming useless or simply there to tick that box, i will give it the functionality of key generation.
+since the 3 types of ciphers dont all work the same they could not use the same type of key, for example vignenere needs a key that dictates how many random letters the keyword will  contian, wheras ceaser
+simply needs an integer that theoretically could be any number, but should be capped to keep from causing code complications and bugs. the main.py file will call not only on the selected cipher file, but also read the config file for key generation rules.

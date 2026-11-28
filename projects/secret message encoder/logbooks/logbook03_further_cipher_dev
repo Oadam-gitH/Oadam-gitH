@@ -1,0 +1,56 @@
+To start i need to upgrade my current ceaser cipher. fixing some main glaring problems like:
+
+- the code does not wrap around the alphabet, causing letters like z to go into characters. this can be fixed by simply laying out the alphabet in a string variable, and the same for the capitals of those letters (just use .upper). then, inside a for loop for each letter in the message entered by the user, ill have an if statement check if the letters in the message entered by the user is in the alphabet or upper alphabet, if so, the code will l=move each letter up the alphabet by the key. if we use modulo 26 on this equation, it will return us back around to the beginning of the alphabet if we exceed 25. for example, since we're programming the alphabet starts at 0 not 1, so a is 0. this means z, the last letter, is 25. if the key is 3 this pushes it to position 28, which if we then % by 26, takes us back to 2. this doees mean however that spaces, punctuation and numbers will not be shifted in the message. it does mean that uppercase remains uppdercase and lowercase remains lowercase.
+
+- random key generation, in the future this will be dome within the config.Json but for now each code file can be self sufficient. 
+
+- im also going to use .index on this alphabet variable to find the position of letters within the string. This is not an original, rather one i found through research on stack over flow (https://stackoverflow.com/questions/5927149/get-character-position-in-alphabet)
+
+
+(Z + key) % 26 = x
+
+where X is the correct shifted letter
+
+(Z + 3) % 26 = C
+
+
+##vigenere##
+
+for the first draft of my vigenere code, which will be in a seperate test code file, im going to simply use the word "key" as my key.
+
+to visualise how a vigenere cipher works for myself and the examiner of this code:
+
+message:      key:          shift (by position of key letter in alphabet):
+
+h             k             10 
+e             e             4
+l             y             24
+l             k             10
+o             e             4
+w             y             24
+o             k             10 
+r             e             4
+l             y             24
+d             k             10 
+
+outcome: rijvsuyvjn
+
+program test:
+
+enter a message to encode: helloworld
+encoded message: rijvsuyvjn
+
+
+the next step is allowing the user to input a custom key, as that seems more appropriate for the vigenere cipher specifically. and a small errror check to make sure the user enteres only letters for the key.
+
+finally, im going to test both the ceaser cipher and vigenere cipher in my command line (cmd)
+
+ceaser test:
+
+![ceaser cmd test](image.png)
+
+(need to fix spelling of key in output)
+
+vigenere test:
+
+![vigenere cmd test](image.png)
